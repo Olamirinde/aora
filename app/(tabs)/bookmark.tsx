@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const TabsLayout = () => {
+const bookmark = () => {
   return (
     <View>
-      <Text>TabsLayout</Text>
+      <Text>bookmark</Text>
     </View>
   );
 };
 
-export default TabsLayout;
+export default bookmark;
 
 const styles = StyleSheet.create({});
