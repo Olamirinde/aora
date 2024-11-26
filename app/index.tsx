@@ -1,9 +1,9 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { Link } from "expo-router";
+import { Redirect, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../constants";
-
+import CustomButton from "@/components/CustomButton";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
@@ -22,8 +22,15 @@ export default function App() {
             Where creativity meets innovation: embark on a journey of limitless
             exploration with Aora
           </Text>
+          <CustomButton
+            title="Continue with Email"
+            handlePress={() => router.push("/sign-in")}
+          />{" "}
+          {/* Corrected spelling */}
         </View>
       </ScrollView>
+
+      <StatusBar backgroundColor="#161622" style="light" />
     </SafeAreaView>
   );
 }
@@ -36,7 +43,7 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    minHeight: "100%",
+    minHeight: "80%",
     paddingVertical: 16,
   },
   logoStyle: {
@@ -47,7 +54,7 @@ const styles = StyleSheet.create({
   cardStyle: {
     maxWidth: 380,
     width: "100%",
-    height: 84,
+    height: 350,
     resizeMode: "contain",
   },
   textContainer: {
@@ -58,7 +65,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: "white",
     textAlign: "center",
-    fontWeight: 700,
+    fontWeight: "700",
   },
   inlineStyle: {
     color: "#FF8E01",
